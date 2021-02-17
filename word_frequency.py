@@ -10,7 +10,6 @@ def print_word_freq(file):
     """Read in `file` and print out the frequency of words in that file."""
     with open(file, "r") as open_file:
         read_file = open_file.read()
-        # print(type(read_file))
         for i in stop_characters:
             read_file = read_file.replace(i, '')
         read_file = read_file.replace("\n", ' ')
@@ -18,8 +17,6 @@ def print_word_freq(file):
         read_file = read_file.replace("-", ' ')
         read_file = read_file.lower()
         read_file = read_file.split(" ")
-        read_file.remove('a')
-        # print(read_file)
         copy_list = []
         for word in read_file:
             # print(word)
