@@ -19,18 +19,11 @@ def print_word_freq(file):
         read_file = read_file.split(" ")
         copy_list = []
         for word in read_file:
-            # print(word)
-            # print(read_file)
             if word not in stop_words:
                 copy_list.append(word)
-        # print(read_file)
-        # print(copy_list)
-        another_list = []
         for word in copy_list:
-            if word not in another_list:
-                print(word, "|", copy_list.count(word),
-                      "*" * copy_list.count(word))
-                another_list.append(word)
+            print(word, "|", copy_list.count(word),
+                  "*" * copy_list.count(word))
 
 
 if __name__ == "__main__":
